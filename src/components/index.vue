@@ -41,6 +41,19 @@
         >
       </div>
     </div>
+    <div class="bottom-left">
+      <div v-for="(item, index) in channelList" :key="index">
+        <a :href="item.url"
+          ><img :src="item.src" alt="" />
+          <p>{{ item.value }}</p></a
+        >
+      </div>
+    </div>
+    <div class="bottom-right" v-for="(item, index) in promoList" :key="index">
+      <a :href="item.url">
+        <img :src="item.src" alt="" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -1003,6 +1016,55 @@ export default {
           url: "https://item.mi.com/product/10000160.html",
         },
       ],
+      promoList: [
+        {
+          value: "Redmi 7A",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c745ff5931a1894e51c34b64888c5fca.jpg?w=632&h=340",
+          url: "https://www.mi.com/redmi7a/",
+        },
+        {
+          value: "小米MIX3",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e7b51b721c3319e9c2916cc41cd9c695.jpg?w=632&h=340",
+          url: "https://www.mi.com/mix3/",
+        },
+        {
+          value: "小米手环4",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/816a66edef10673b4768128b41804cae.jpg?w=632&h=340",
+          url: "https://www.mi.com/shouhuan4/",
+        },
+      ],
+      channelList: [
+        {
+          value: "小米秒杀",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48",
+          url: "https://www.mi.com/seckill/",
+        },
+        {
+          value: "企业团购",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/806f2dfb2d27978e33fe3815d3851fa3.png?w=48&h=48",
+          url: "https://qiye.mi.com/",
+        },
+        {
+          value: "F码通道",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/eded6fa3b897a058163e2485532c4f10.png?w=48&h=48",
+          url: "https://order.mi.com/f",
+        },
+        {
+          value: "米粉卡",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/43a3195efa6a3cc7662efed8e7abe8bf.png?w=48&h=48",
+          url: "https://www.mi.com/mimobile/",
+        },
+        {
+          value: "以旧换新",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4846bca6010a0deb9f85464409862af.png?w=48&h=48",
+          url: "https://huanxin.mi.com/",
+        },
+        {
+          value: "话费充值",
+          src: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9a76d7636b08e0988efb4fc384ae497b.png?w=48&h=48",
+          url: "https://recharge.10046.mi.com/",
+        },
+      ],
     };
   },
   methods: {
@@ -1071,11 +1133,11 @@ a {
 }
 .box {
   position: relative;
-  height: 600px;
+  height: 660px;
   width: 100%;
   margin: 130px -8px;
   // background-color: pink;
-  min-width: 1800px;
+  min-width: 1900px;
 }
 .swiper-container {
   float: flex;
@@ -1157,6 +1219,59 @@ a {
     width: 22%;
     position: absolute;
     // display: inline-block;
+  }
+}
+.bottom-left {
+  position: relative;
+  width: 200px;
+  height: 170px;
+  background-color: rgb(95, 87, 80);
+  margin: 20px 290px;
+  div {
+    float: left;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    width: 50px;
+    height: 65px;
+    // background-color: aqua;
+    margin: 5px 5px;
+    text-align: center;
+  }
+  img {
+    width: 60%;
+    opacity: 0.8;
+  }
+  p {
+    font-size: 5px;
+    color: white;
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  img:hover {
+    opacity: 1.5;
+  }
+  // p:hover {
+  //   opacity: 1;
+  // }
+}
+.bottom-right {
+  float: right;
+  top: -29%;
+  right: 22%;
+  position: relative;
+  width: 290px;
+  height: 170px;
+  margin: 0px 20px;
+  background-color: rgb(95, 87, 80);
+  // box-shadow: 5px 5px 10px gray;
+  img {
+    position: absolute;
+    width: 110%;
+    background-repeat: repeat;
+  }
+  img:hover {
+    box-shadow: 5px 5px 10px gray;
   }
 }
 </style>
