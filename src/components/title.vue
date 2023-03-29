@@ -412,7 +412,7 @@ a {
   height: 150px;
   background-color: white;
   margin: -8px;
-  min-width: 1800px;
+  // min-width: 1800px;
   img {
     position: absolute;
     width: 3%;

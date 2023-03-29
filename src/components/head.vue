@@ -94,7 +94,7 @@ li {
   float: left;
   color: rgb(176, 176, 148);
   font-size: 10px;
-  line-height: 40px;
+  line-height: 50px;
   padding: 0px 5px;
 }
 .ul-left {
@@ -118,14 +118,14 @@ a:hover {
 .img-shop {
   position: absolute;
   width: 1%;
-  margin-top: 12px;
+  margin-top: 15px;
   margin-left: 20px;
 }
 .pgwc {
   color: rgb(176, 176, 176);
   font-size: 10px;
   margin-left: 50px;
-  margin-top: 13px;
+  margin-top: 15px;
 }
 .pgwc:hover {
   color: rgb(255, 103, 0);

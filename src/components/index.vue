@@ -1,5 +1,6 @@
 <template>
   <div class="box" @mouseleave="leave()">
+    <!-- <div>{{ this.table }}</div> -->
     <div class="swiper-container">
       <div class="left-box">
         <div
@@ -26,7 +27,6 @@
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
-
       <!-- 如果需要导航按钮 -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
@@ -1101,6 +1101,10 @@ export default {
       },
       autoplay: true,
     });
+    console.log(this.table);
+  },
+  beforeCreate() {
+    console.log(this.table);
   },
 };
 </script>
@@ -1137,7 +1141,7 @@ a {
   width: 100%;
   margin: 130px -8px;
   // background-color: pink;
-  min-width: 1900px;
+  // min-width: 1900px;
 }
 .swiper-container {
   float: flex;
