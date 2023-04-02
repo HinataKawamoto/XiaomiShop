@@ -1,6 +1,5 @@
 <template>
   <div class="box" @mouseleave="leave()">
-    <!-- <div>{{ this.table }}</div> -->
     <div class="swiper-container">
       <div class="left-box">
         <div
@@ -1101,42 +1100,14 @@ export default {
       },
       autoplay: true,
     });
-    console.log(this.table);
-  },
-  beforeCreate() {
-    console.log(this.table);
   },
 };
 </script>
 
 <style lang='less' scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.clear {
-  position: absolute;
-  top: 200px;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
 .box {
   position: relative;
+  margin: 0 auto;
   height: 660px;
   width: 100%;
   margin: 130px -8px;
@@ -1144,7 +1115,7 @@ a {
   // min-width: 1900px;
 }
 .swiper-container {
-  float: flex;
+  display: flex;
   height: 450px;
   width: 63%;
   background-color: white;
@@ -1166,11 +1137,9 @@ a {
 }
 .left-box {
   position: absolute;
-  // display: inline-block;
   width: 200px;
   height: 100%;
   background-color: rgb(168 168 168/50%);
-  // opacity: 0.5;
   z-index: 2;
 
   li {
@@ -1183,7 +1152,6 @@ a {
   }
   .lbox {
     height: 33px;
-    // background-color: rgb(255, 103, 0);
     li:hover {
       color: rgb(255, 103, 0);
     }
@@ -1198,14 +1166,13 @@ a {
   left: 25%;
   top: 0%;
   box-shadow: 5px 5px 10px gray;
-  // left: 100%;
   .table {
     float: left;
+    display: flex;
     position: relative;
     top: 10px;
     height: 50px;
     width: 230px;
-    // background-color: pink;
     margin: 10px 10px;
     p {
       font-size: 13px;

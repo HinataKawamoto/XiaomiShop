@@ -376,38 +376,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.box {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-.clear {
-  position: absolute;
-  top: 200px;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
 .title {
   position: absolute;
   display: flex;
+  margin: 0 auto;
   width: 100%;
   height: 150px;
   background-color: white;
@@ -420,7 +392,6 @@ a {
   }
   li {
     float: left;
-    // display: flex;
     font-size: 15px;
     height: 150px;
     line-height: 150px;
@@ -484,6 +455,7 @@ a {
 }
 .table {
   position: relative;
+
   float: left;
   left: 10%;
   width: 180px;

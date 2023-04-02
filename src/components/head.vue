@@ -57,31 +57,6 @@ export default {
 </script>
 
 <style  scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.clear {
-  position: absolute;
-  top: 200px;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
 .title {
   position: relative;
   display: flex;
@@ -89,6 +64,7 @@ a {
   height: 60px;
   background-color: rgb(51, 51, 51);
   margin: -8px;
+  margin: 0 auto;
 }
 li {
   float: left;

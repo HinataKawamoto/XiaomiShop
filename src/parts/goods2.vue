@@ -2,7 +2,8 @@
   <div>
     <div class="box">
       <p class="title">家电</p>
-      <div>{{ this.table }}</div>
+      <p class="hot" @mouseenter="hot()">热门</p>
+      <p class="movie" @mouseenter="movie()">电视音影</p>
       <div class="big">
         <div class="big-box">
           <div class="big-box-a" v-for="(item, index) in promo" :key="index">
@@ -19,8 +20,8 @@
                 {{ item.newPrice }}元<span class="oldPrice"
                   >{{ item.oldPrice }}元</span
                 >
-              </p></a
-            >
+              </p>
+            </a>
           </div>
         </div>
       </div>
@@ -127,7 +128,7 @@ export default {
         },
         {
           value: 'Air 13.3" 2019款 ',
-          desc: "",
+          desc: "全面性价比超高的国民轻薄本",
           sub: true,
           newPrice: "4699",
           oldPrice: "",
@@ -201,7 +202,7 @@ export default {
         },
         {
           value: "小米盒子4",
-          desc: "",
+          desc: "搭载了HDMI 2.0接口，可以连接、拓展更多配件",
           sub: false,
           newPrice: "299",
           oldPrice: "",
@@ -212,12 +213,15 @@ export default {
     };
   },
   methods: {
-    get() {
-      console.log(hots);
+    hot() {
+      this.table = this.hots;
+    },
+    movie() {
+      this.table = this.television;
     },
   },
   mounted() {
-    // this.table = this.hots;
+    this.table = this.hots;
     // console.log(this.table);
   },
 };
@@ -332,5 +336,29 @@ export default {
   top: 700px;
   left: 0px;
   width: 100%;
+}
+.hot {
+  position: absolute;
+  left: 1070px;
+  top: 0px;
+  font-size: 16px;
+  top: -10px;
+  cursor: pointer;
+}
+.movie {
+  position: absolute;
+  display: inline-block;
+  left: 1130px;
+  top: -10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.hot:hover {
+  text-decoration: underline;
+  color: rgb(255, 103, 9);
+}
+.movie:hover {
+  text-decoration: underline;
+  color: rgb(255, 103, 9);
 }
 </style>

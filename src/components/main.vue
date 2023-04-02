@@ -126,17 +126,18 @@ export default {
 
 <style lang="less" scoped>
 .box {
-  // display: flex;
+  display: flex;
   position: relative;
   float: left;
   top: 90%;
   margin: -150px 0px;
   width: 100%;
-  height: 3000px;
+  height: 7000px;
+
+  // 总盒子大小
   background-color: rgb(245, 245, 245);
-  overflow: auto;
-  clear: both;
   .flash {
+    margin: 0 auto;
     position: relative;
     width: 240px;
     height: 340px;
@@ -152,7 +153,6 @@ export default {
     }
     img {
       position: relative;
-      // top: 15px;
       margin: 30px 100px;
     }
     .end {
@@ -165,6 +165,7 @@ export default {
   }
 }
 .shangou {
+  display: flex;
   position: relative;
   font-size: 23px;
   left: 280px;
@@ -285,6 +286,6 @@ export default {
   position: absolute;
   top: 420px;
   left: 275px;
-  width: 64%;
+  width: 1220px;
 }
 </style>
